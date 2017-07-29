@@ -1,5 +1,25 @@
 <html>
-  <head></head>
+  <head>
+    <% if background_color == :red %>
+    <style>
+      body {
+        background: red;
+      }
+    </style>
+    <% elsif background_color == :springgreen %>
+    <style>
+      body {
+        background: springgreen;
+      }
+    </style>
+    <% else %>
+    <style>
+      body {
+        background: lightpink;
+      }
+    </style>
+    <% end %>
+  </head>
   <body>
     <p>
       <%= message %>
