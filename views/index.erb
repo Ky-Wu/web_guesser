@@ -3,7 +3,7 @@
     <% if background_color == :red %>
     <style>
       body {
-        background: red;
+        background: darkred;
       }
     </style>
     <% elsif background_color == :springgreen %>
@@ -28,5 +28,7 @@
       <input type='text' name='guess' />
       <input type='submit' value='Guess!' />
     </form>
+    <p>
+      <%= guess_count %> guesses remaining.
   </body>
 </html>
