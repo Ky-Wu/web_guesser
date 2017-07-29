@@ -30,5 +30,11 @@
     </form>
     <p>
       <%= guess_count %> guesses remaining.
+    </p>
+    <p>
+      <% if cheat %>
+      The secret number is <%= number %>.
+      <% end %>
+    </p>
   </body>
 </html>

@@ -36,13 +36,15 @@ end
 
 get '/' do
   guess = params['guess']
+  cheat = params['cheat']
   message = guess_message(guess)
   color = color_check(guess)
-  generate_new_number if @@guesses == 0 || guess == $secret_number
+  generate_new_number if @@guesses == 0 || guess.to_i == $secret_number
   erb :index, :locals => {
     :number => $secret_number,
     :message => message,
     :background_color => color,
-    :guess_count => @@guesses.to_s
+    :guess_count => @@guesses.to_s,
+    :cheat => cheat
   }
 end
